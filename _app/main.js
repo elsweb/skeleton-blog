@@ -1,1 +1,1 @@
-angular.module('blog', []);
+angular.module('blog', ['mainDirective']);
