@@ -14,14 +14,13 @@ Author
 
 Skills used
 ========================
-
-+![N|Solid](https://drive.google.com/uc?id=16diPsCWSBdPUyz1NFtKZSBOlXntTxUjT)<html>
-+![N|Solid](https://drive.google.com/uc?id=1UgOq7QEQ2BEVSpVUeAzExY43nRAI8eWn)<css>
-+![N|Solid](https://drive.google.com/uc?id=1oncjdSGvUdUbs0t2W8XdSnVU1tvygpE0)<js>
-+![N|Solid](https://drive.google.com/uc?id=1eSZKEg9q6EkUZ0A2m7hKlrNS4VME2q6Y)<angular>
-+![N|Solid](https://drive.google.com/uc?id=1q-21b8hJYoZ2IYAUGbE_4lwoiiqO7Rw8)<jquery>
-+![N|Solid](https://drive.google.com/uc?id=1rjZ6szYNzcu6d5nAVT7CvNx_TgGtvRey)<nodejs>
-+![N|Solid](https://drive.google.com/uc?id=1eb_OLqKHFUPs6x-Ysv62feXHFyLbPRA1)<json>
-+![N|Solid](https://drive.google.com/uc?id=17mICnyngBMzHsD2mWofK1S--4YYondcY)<git>
-+![N|Solid](https://drive.google.com/uc?id=1F6xcgfgNN5LxPtFOQhJG73qsatbJqZlL)<github>
-+![N|Solid](https://drive.google.com/uc?id=1ldC35vLAOBM1YxuK8BLqYOeeZLp62T9y)<sublimetext>
+![N|Solid](https://drive.google.com/uc?id=16diPsCWSBdPUyz1NFtKZSBOlXntTxUjT)<html>
+![N|Solid](https://drive.google.com/uc?id=1UgOq7QEQ2BEVSpVUeAzExY43nRAI8eWn)<css>
+![N|Solid](https://drive.google.com/uc?id=1oncjdSGvUdUbs0t2W8XdSnVU1tvygpE0)<js>
+![N|Solid](https://drive.google.com/uc?id=1eSZKEg9q6EkUZ0A2m7hKlrNS4VME2q6Y)<angular>
+![N|Solid](https://drive.google.com/uc?id=1q-21b8hJYoZ2IYAUGbE_4lwoiiqO7Rw8)<jquery>
+![N|Solid](https://drive.google.com/uc?id=1rjZ6szYNzcu6d5nAVT7CvNx_TgGtvRey)<nodejs>
+![N|Solid](https://drive.google.com/uc?id=1eb_OLqKHFUPs6x-Ysv62feXHFyLbPRA1)<json>
+![N|Solid](https://drive.google.com/uc?id=17mICnyngBMzHsD2mWofK1S--4YYondcY)<git>
+![N|Solid](https://drive.google.com/uc?id=1F6xcgfgNN5LxPtFOQhJG73qsatbJqZlL)<github>
+![N|Solid](https://drive.google.com/uc?id=1ldC35vLAOBM1YxuK8BLqYOeeZLp62T9y)<sublimetext>
