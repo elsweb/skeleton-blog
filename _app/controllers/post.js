@@ -1,6 +1,11 @@
-angular.module('blog').controller('PostController', function($scope){
-	$scope.post = {
-		title : 'Lion',
-		url : 'http://www.fundosanimais.com/Minis/leoes.jpg'
-	};
+angular.module('blog').controller('PostController', function($scope, $http){
+	$scope.posts = [];
+	var url = 'http://elsweb.servehttp.com:3030/post/consulta';
+    $http.get(url)
+    .success(function(posts){
+    	$scope.posts = posts;
+    })
+    .error(function(erro){
+    	console.log(error);
+    });
 });
