@@ -1,1 +1,1 @@
-angular.module('blog', ['mainDirective']);
+angular.module('blog' , ['mainDirective','ngAnimate']);
