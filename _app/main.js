@@ -8,7 +8,8 @@ angular.module('blog' , ['mainDirective','ngAnimate','ngRoute']).config(function
 	});
 
 	$routeProvider.when('/post/add',{
-		templateUrl : theme + 'cadastro.html'
+		templateUrl : theme + 'cadastro.html',
+		controller : 'addPost'
 	});
 
 	$routeProvider.otherwise({redirectTo : '/'});
