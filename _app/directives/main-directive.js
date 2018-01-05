@@ -17,4 +17,14 @@ angular.module('mainDirective', []).directive('mainPainel',function(){
 	};
 	ddo.templateUrl = '_app/directives/inc/btn-alert.html';
 	return ddo;
-});
+})
+.directive('onFocus', function(){
+	var ddo = {};
+	ddo.restrict = "A";
+	ddo.link = function(scope, element){
+		scope.$on('onFocus', function(){
+			element[0].focus();
+		});
+	}
+	return ddo;
+})

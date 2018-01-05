@@ -18,11 +18,12 @@ angular.module('Resource' , ['ngResource'])
 .factory('Update',function($resource){
 
 })
-.factory('RegisterPost', function(Create, $q){
+.factory('RegisterPost', function(Create, $q, $rootScope){
 	var service = {};
 	service.add = function(post){
 		return $q(function(resolve , reject){
 			Create.add(post, function(){
+					$rootScope.$broadcast('onFocus');
 					resolve({
 						msg : 'Postagem Cadastrada Com Sucesso',
 						inc : true
