@@ -1,7 +1,18 @@
-angular.module('blog').controller('addPost', function($scope, $http, $routeParams){
+angular.module('blog').controller('addPost', function($scope, $http, $resource, $routeParams){
 	$scope.post = {};
 	$scope.msg = '';
 	var url = 'http://elsweb.servehttp.com:3030'
+	 /*
+    Servidor ainda não suporta o uso de apenas uma unica url para as actions,
+    porém o blog já vem com suporte para o uso da mesma no futuro. Altere o nome da variavel
+    para para fazer uso tem todo o script quando tiver o suporte. Dica aula 10 do Curso.
+    */
+
+	var edit = $resource(url + '/post/update/:id', null,{
+		update : {
+			method : 'PUT'
+		}
+	});
 
 	/*Servidor ainda não da suporte ao RECOVER, porém manter estrutura para fins Futuros*/
 	if($routeParams.id){
@@ -19,13 +30,11 @@ angular.module('blog').controller('addPost', function($scope, $http, $routeParam
 		/*Servidor ainda não da suporte ao UPDATE, porém manter estrutura para fins Futuros*/
 		if($scope.formPost.$valid){
 			if($scope.post.post_id){
-				$http.put(url + '/post/update' + $scope.post.post_id, $scope.post)
-				.success(function(){
+				edit.update({id : $scope.post.post_id}, $scope.post, function(){
 					$scope.msg = 'Postagem ' + $scope.post.post_title + ' foi alterado com sucesso';
-				})
-				.error(function(){
+				},function(error){
 					$scope.msg = 'Não foi Possível alterar ' + $scope.post.post_title;
-				});
+				})
 			}else{
 				$http.post(url + '/post/create' , $scope.post)
 				.success(function(){

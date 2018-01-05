@@ -1,4 +1,4 @@
-angular.module('blog' , ['mainDirective','ngAnimate','ngRoute']).config(function($routeProvider , $locationProvider){
+angular.module('blog' , ['mainDirective','ngAnimate','ngRoute','ngResource']).config(function($routeProvider , $locationProvider){
 	
 	var theme = 'themes/blog/';
 	$locationProvider.html5Mode(true);
