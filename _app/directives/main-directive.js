@@ -15,6 +15,6 @@ angular.module('mainDirective', []).directive('mainPainel',function(){
 		nome : '@', //Para strings
 		acao : '&'  //Para expressões
 	};
-	ddo.template = '<button ng-click="acao(post)" class="btn btn-danger btn-block">{{nome}}</button>';
+	ddo.templateUrl = '_app/directives/inc/btn-alert.html';
 	return ddo;
 });
