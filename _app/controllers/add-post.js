@@ -1,4 +1,4 @@
-angular.module('blog').controller('addPost', function($scope, $http, Create, $resource, $routeParams){
+angular.module('blog').controller('addPost', function($scope, $http, RegisterPost, $resource, $routeParams){
 	$scope.post = {};
 	$scope.msg = '';
 	var url = 'http://elsweb.servehttp.com:3030'
@@ -29,13 +29,14 @@ angular.module('blog').controller('addPost', function($scope, $http, Create, $re
 					$scope.msg = 'Não foi Possível alterar ' + $scope.post.post_title;
 				})
 			}else{
-				Create.add($scope.post, function(){
-					$scope.post = {};
-					$scope.msg = 'Postagem Cadastrada Com Sucesso';
-				},function(){
-					$scope.msg = 'Não foi Posssível Cadastrar Postagem';
-					console.log(error);
-				});
+				RegisterPost.add($scope.post)
+				.then(function(dados){
+					$scope.msg = dados.msg;
+					if (dados.inc) $scope.post = {};
+				})
+				.cacth(function(error){
+					$scope.msg = error.msg;
+				})
 			}
 		}
 	};

@@ -17,7 +17,26 @@ angular.module('Resource' , ['ngResource'])
 })
 .factory('Update',function($resource){
 
-});
+})
+.factory('RegisterPost', function(Create, $q){
+	var service = {};
+	service.add = function(post){
+		return $q(function(resolve , reject){
+			Create.add(post, function(){
+					resolve({
+						msg : 'Postagem Cadastrada Com Sucesso',
+						inc : true
+					})
+				},function(error){
+					console.log(error);
+					reject({
+						msg : 'Não foi Posssível Cadastrar Postagem'
+				});
+			})
+		})
+	}
+	return service;
+})
  /*
     Servidor ainda não suporta o uso de apenas uma unica url para as actions,
     porém o blog já vem com suporte para o uso da mesma no futuro. Altere o nome da variavel
