@@ -5,10 +5,12 @@
 <form name="formPost" class="row" novalidate ng-submit="submeter()">
 	<div class="col-md-6">
 		<div class="form-group">
-			<select ng-model="post.author_id" name="author_id" class="form-control" required>
-				<option></option>
-				<option value="7">Emanuel Luiz</option>
-				<option value="8">Aline Santos</option>
+			<select ng-model="post.author_id" 
+			ng-controller="AuthorController" 
+			ng-model="post.author"
+			ng-options="author.author_id as (author.author_name | uppercase) for author in authors"
+			name="author_id" class="form-control" required>
+				<option value="">Selecione Autor</option>
 			</select>
 			<span ng-show="formPost.$submitted && formPost.author_id.$error.required" class="form-control alert-danger">
 				Campo Obrigatório
