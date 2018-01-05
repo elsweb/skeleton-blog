@@ -1,0 +1,40 @@
+<div class="page-header text-center">
+	<h1>{{post.post_title}}</h1>
+</div>
+<p ng-show="msg.length" class="alert alert-info">{{msg}}</p>
+<form name="formPost" class="row" novalidate ng-submit="submeter()">
+	<div class="col-md-6">
+		<div class="form-group">
+			<select ng-model="post.author_id" 
+			ng-controller="AuthorController" 
+			ng-model="post.author"
+			ng-options="author.author_id as (author.author_name | uppercase) for author in authors"
+			name="author_id" class="form-control" required>
+				<option value="">Selecione Autor</option>
+			</select>
+			<span ng-show="formPost.$submitted && formPost.author_id.$error.required" class="form-control alert-danger">
+				Campo Obrigatório
+			</span>
+		</div>
+		
+		<div class="form-group">
+			<label for="">Título</label>
+			<input ng-model="post.post_title" name="post_title" class="form-control" required ng-maxlength="35">
+			<span ng-show="formPost.$submitted && formPost.post_title.$error.required" class="form-control alert-danger">
+				Campo Obrigatório
+			</span>
+			<span ng-show="formPost.post_title.$error.maxlength" class="form-control alert-info">
+				Máximo 35 caracteres
+			</span>
+		</div>
+		<div class="form-group">
+			<label for="">Conteúdo</label>
+			<textarea ng-model="post.post_content" name="post_content" class="form-control" required></textarea>
+			<span ng-show="formPost.$submitted && formPost.post_content.$error.required" class="form-control alert-danger">
+				Campo Obrigatório
+			</span>
+		</div>
+		<button ng-disabled="formPost.$invalid" type="submit" class="btn btn-primary">Salvar</button>
+		<a href="/" class="btn btn-primary" on-focus>Voltar</a>
+	</div>
+</form>
