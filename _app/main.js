@@ -12,5 +12,10 @@ angular.module('blog' , ['mainDirective','ngAnimate','ngRoute']).config(function
 		controller : 'addPost'
 	});
 
+	$routeProvider.when('/post/edit/:id',{
+		templateUrl : theme + 'cadastro.html',
+		controller : 'addPost'
+	});
+
 	$routeProvider.otherwise({redirectTo : '/'});
 });
